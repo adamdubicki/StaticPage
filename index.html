@@ -93,7 +93,7 @@
           </div>
             
             <div class="col-lg-4 portfolio-item">
-            <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
+            <a class="portfolio-link" href="#boundedbuffermodal" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content">
                   <i class="fa fa-search-plus fa-3x"></i>
@@ -104,18 +104,7 @@
           </div>            
             
           <div class="col-lg-4 portfolio-item">
-            <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
-              <div class="caption">
-                <div class="caption-content">
-                  <i class="fa fa-search-plus fa-3x"></i>
-                </div>
-              </div>
-              <p class="text-center .caption">BattleSnake 1</p>
-            </a>
-          </div>
-            
-          <div class="col-lg-4 portfolio-item">
-            <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
+            <a class="portfolio-link" href="#bookmyroommodal" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content">
                   <i class="fa fa-search-plus fa-3x"></i>
@@ -126,7 +115,7 @@
           </div>             
             
           <div class="col-lg-4 portfolio-item">
-            <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
+            <a class="portfolio-link" href="#detectionrobotmodal" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content">
                   <i class="fa fa-search-plus fa-3x"></i>
@@ -298,15 +287,16 @@
                   <h2>BattleSnake 2</h2>
                   <h2>(2017)</h2>
                     <p><a href="https://www.battlesnake.io/" target="_blank">BattleSnake</a> is an annual AI coding competition in Victoria BC. It is based of the classic game of 'Snake' with a few extra rules. There are multiple snakes, and a possibility to starve if a snake does not eat within 100 turns.</p>
-                    <p>For my second year of BattleSnake I ended up coding a fairly sophisticated snake. First the snake tries to determine a good piece of food to eat. A good piece of food is determined if our snake is closest to it than all other competiting snakes.</p>
+                    <p>My first year of BattleSnake (2016), was a huge learning experiance for my team. Only one team member had ever competed in BattleSnake before. In the end our snake was pretty simple, and only contained code for it not to eat itself. Despite this, it was almost able to move to the 2nd round of the advanced division. The repository for the first snake (2016) can be found <a href="https://github.com/bates-andy123/battlesnake-python" target="_blank">here.</a>
+                    <p>For my second year of BattleSnake I ended up coding a fairly sophisticated snake. First the snake tries to determine a good piece of food to eat. A good piece of food is determined if our snake is closest to it than all other competing snakes.</p>
                     <p>
                         If such a piece of food exists, it finds the shortest path using A* search. If a path exists, we check to make sure that if we were to move our snake to that piece of food that we can still reach our tail. This acts a heuristic to prevent our snake from running into dead ends.
                     </p>
                     <p>If no path exists to a good food, our snake then tries to loop and follow its tail. This allows the snake to stall indefinitly (well, until it starves to death).</p>
                     <p>Lastly, if no good food exists, nor is there a path to loop, our snake tries to find the most open space available using a flood fill algorithm Below is a video of our snake in action, playing a game with itself.</p>
                     <iframe width="640" height="360" src="https://www.youtube.com/embed/D8bhfrScjn8?ecver=1" frameborder="0" allowfullscreen class="text-center"></iframe>
-                    <p>Our snake was unable to make it to the second round of the advanced division. Yet, it still gave a strong showing and was cited as a "pretty tough" by one of my opponents <a href="https://rdbrck.com/2017/03/building-bounty-snake-post-mortem/" target="_blank">(a developer at RedBrick practiced against my snake)</a>.</p>
-                    <p>The repository for my snake can be found <a href="https://github.com/adamdubicki/BattleSnake" target="_blank">here.</a></p>
+                    <p>Our snake was unable to make it to the second round of the advanced division. Yet, it still gave a strong showing and was cited as a "pretty tough" by one of our opponents <a href="https://rdbrck.com/2017/03/building-bounty-snake-post-mortem/" target="_blank">(a developer at RedBrick practiced against it)</a>.</p>
+                    <p>The repository for my snake (2017) can be found <a href="https://github.com/adamdubicki/BattleSnake" target="_blank">here.</a></p>
                     
                   <button class="btn btn-success" type="button" data-dismiss="modal">
                     <i class="fa fa-times"></i>
@@ -318,7 +308,95 @@
         </div>
       </div>
     </div>      
+ <div class="portfolio-modal modal fade" id="boundedbuffermodal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <h2>Bounded Buffer</h2>
+                  <h2>(2017)</h2>
+                    <p>Bounded buffer problem is an interesting mutual exclusion problem. Essentially there exists a circular buffer which can hold N items. Clients can then either remove or add items to the buffer asynchronously. While conceptually simple, there exist interesting edge cases.</p>
+                    <p>The buffer has a limited size, so adding items to a full buffer should cause clients to queue up, waiting for an open space to place their item. The opposite is also true for removing items from an empty buffer. Clients wanting to remove from an empty buffer will queue up waiting for items to be added. </p>
+                    <p>For further complication, clients cannot remove the same item, nor add to the same buffer space.</p>
+                    <p>To solve this problem, two thread conditionals are used with a mutex. The two conditionals determine whether the buffer is full, or empty. When the buffer is no longer empty it signal waiting clients that they are able to remove and vice versa for adding. The mutex acts as a guard for interacting with the buffer itself. For example, if two clients try to remove at the same time, they could accidently both try to to remove the same item. This mutex gates the clients to removing items one at a time.</p>
+                    <p>For extra work, a round robin scheduler was added so that threads would be given an equal oppertunity to complete their task.</p>
+                    <p>The repository for the bounded buffer problem can be found <a href="https://github.com/adamdubicki/BBuffer" target="_blank">here.</a></p>
+                    
+                  <button class="btn btn-success" type="button" data-dismiss="modal">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+      
+ <div class="portfolio-modal modal fade" id="bookmyroommodal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <h2>Book My Room</h2>
+                  <h2>(2015)</h2>
+                    <p>Book My Room was a class project to create a scheduling web application for booking study rooms. It was built using the MEAN stack and is available to try <a href="http://bookmyroom.herokuapp.com/login" target="_blank">here.</a></p>
+                    <p>Username: admin</p>
+                    <p>Password: adminadmin123</p>
+                    
+                  <button class="btn btn-success" type="button" data-dismiss="modal">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+ <div class="portfolio-modal modal fade" id="detectionrobotmodal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl"></div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 mx-auto">
+                <div class="modal-body">
+                  <h2>Detection Robot</h2>
+                  <h2>(2014)</h2>
+                    <p>In my first year of UVic I got to work on a group project for designing and building a robot. The goal was to find a UV emitting pylon in an arena. Our solution was to use a binary search to try and find the direction of the pylon. The robot can be seen in action below (volume warning: the wheels screech a bit).</p>
+                    <iframe width="640" height="360" src="https://www.youtube.com/embed/GkLYsO0KIoE?ecver=1" frameborder="0" allowfullscreen></iframe>
+                    
+                  <button class="btn btn-success" type="button" data-dismiss="modal">
+                    <i class="fa fa-times"></i>
+                    Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
