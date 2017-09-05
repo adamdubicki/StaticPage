@@ -18,6 +18,11 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
+      
+    <!-- Favicon --->
+      <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+      <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+
     <!-- Custom styles for this template -->
     <link href="css/freelancer.css" rel="stylesheet">
 
@@ -66,18 +71,18 @@
         <h2 class="text-center">Projects</h2>
         <div class="row">
             <div class="col-lg-4 portfolio-item">
-            <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
+            <a class="portfolio-link" href="#stockpredictionmodal" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content">
                   <i class="fa fa-search-plus fa-3x"></i>
                 </div>
               </div>
-            <p class="text-center .caption">Stock Prediction</p>
+            <p class="text-center .caption">Stock Market Prediction</p>
             </a>
           </div>            
             
             <div class="col-lg-4 portfolio-item">
-            <a class="portfolio-link" href="#portfolioModal1" data-toggle="modal">
+            <a class="portfolio-link" href="#battlesnake2modal" data-toggle="modal">
               <div class="caption">
                 <div class="caption-content">
                   <i class="fa fa-search-plus fa-3x"></i>
@@ -244,7 +249,7 @@
     </div>
 
     <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="portfolio-modal modal fade" id="stockpredictionmodal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -256,28 +261,18 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <h2>Project Title</h2>
-                  <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="img/portfolio/cabin.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                  <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
-                  </ul>
+                  <h2>Stock Market Prediction</h2>
+                  <h2>(2017)</h2>
+                  <p>
+                      I was involved in a natural language processing project to predict the Dow Jones Industrial Average (DJIA). To accomplish this, reddit news headlines were data mined to determine whether world news headlines could be correlated with the rise and fall of the Dow Jones. </p>
+                  <p>
+                    Our data set consisted of 8 years of reddit data, each day having 25 headlines and whether the DJIA fell or rose on that day. Other features such as the sentiment of the headlines and other preprocessing steps were added using the python library Sci-Kit-Learn.
+                    </p>
+                
+                    <p>
+                        Our best result was a 58.8% accuracy using logistic regression and a day offset. For more details on the project, read the full <a href="https://github.com/TChan92/StockMarketNewsClassifier/blob/master/Report/acl2017.pdf" target="_blank">report</a> or visit the <a href="https://github.com/TChan92/StockMarketNewsClassifier" target="_blank">repository</a> on github.
+                    </p>
+                    
                   <button class="btn btn-success" type="button" data-dismiss="modal">
                     <i class="fa fa-times"></i>
                     Close</button>
@@ -288,7 +283,7 @@
         </div>
       </div>
     </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+ <div class="portfolio-modal modal fade" id="battlesnake2modal" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
@@ -300,28 +295,19 @@
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="modal-body">
-                  <h2>Project Title</h2>
-                  <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="img/portfolio/cake.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                  <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
-                  </ul>
+                  <h2>BattleSnake 2</h2>
+                  <h2>(2017)</h2>
+                    <p><a href="https://www.battlesnake.io/" target="_blank">BattleSnake</a> is an annual AI coding competition in Victoria BC. It is based of the classic game of 'Snake' with a few extra rules. There are multiple snakes, and a possibility to starve if a snake does not eat within 100 turns.</p>
+                    <p>For my second year of BattleSnake I ended up coding a fairly sophisticated snake. First the snake tries to determine a good piece of food to eat. A good piece of food is determined if our snake is closest to it than all other competiting snakes.</p>
+                    <p>
+                        If such a piece of food exists, it finds the shortest path using A* search. If a path exists, we check to make sure that if we were to move our snake to that piece of food that we can still reach our tail. This acts a heuristic to prevent our snake from running into dead ends.
+                    </p>
+                    <p>If no path exists to a good food, our snake then tries to loop and follow its tail. This allows the snake to stall indefinitly (well, until it starves to death).</p>
+                    <p>Lastly, if no good food exists, nor is there a path to loop, our snake tries to find the most open space available using a flood fill algorithm Below is a video of our snake in action, playing a game with itself.</p>
+                    <iframe width="640" height="360" src="https://www.youtube.com/embed/D8bhfrScjn8?ecver=1" frameborder="0" allowfullscreen class="text-center"></iframe>
+                    <p>Our snake was unable to make it to the second round of the advanced division. Yet, it still gave a strong showing and was cited as a "pretty tough" by one of my opponents <a href="https://rdbrck.com/2017/03/building-bounty-snake-post-mortem/" target="_blank">(a developer at RedBrick practiced against my snake)</a>.</p>
+                    <p>The repository for my snake can be found <a href="https://github.com/adamdubicki/BattleSnake" target="_blank">here.</a></p>
+                    
                   <button class="btn btn-success" type="button" data-dismiss="modal">
                     <i class="fa fa-times"></i>
                     Close</button>
@@ -331,183 +317,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <h2>Project Title</h2>
-                  <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="img/portfolio/circus.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                  <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
-                  </ul>
-                  <button class="btn btn-success" type="button" data-dismiss="modal">
-                    <i class="fa fa-times"></i>
-                    Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <h2>Project Title</h2>
-                  <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="img/portfolio/game.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                  <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
-                  </ul>
-                  <button class="btn btn-success" type="button" data-dismiss="modal">
-                    <i class="fa fa-times"></i>
-                    Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <h2>Project Title</h2>
-                  <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="img/portfolio/safe.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                  <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
-                  </ul>
-                  <button class="btn btn-success" type="button" data-dismiss="modal">
-                    <i class="fa fa-times"></i>
-                    Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal">
-            <div class="lr">
-              <div class="rl"></div>
-            </div>
-          </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="modal-body">
-                  <h2>Project Title</h2>
-                  <hr class="star-primary">
-                  <img class="img-fluid img-centered" src="img/portfolio/submarine.png" alt="">
-                  <p>Use this area of the page to describe your project. The icon above is part of a free icon set by
-                    <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                  <ul class="list-inline item-details">
-                    <li>Client:
-                      <strong>
-                        <a href="http://startbootstrap.com">Start Bootstrap</a>
-                      </strong>
-                    </li>
-                    <li>Date:
-                      <strong>
-                        <a href="http://startbootstrap.com">April 2014</a>
-                      </strong>
-                    </li>
-                    <li>Service:
-                      <strong>
-                        <a href="http://startbootstrap.com">Web Development</a>
-                      </strong>
-                    </li>
-                  </ul>
-                  <button class="btn btn-success" type="button" data-dismiss="modal">
-                    <i class="fa fa-times"></i>
-                    Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </div>      
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
