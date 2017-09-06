@@ -250,10 +250,10 @@
                                     <h2>Stock Market Prediction</h2>
                                     <h2>(2017)</h2>
                                     <p>
-                                        I was involved in a natural language processing project to predict the Dow Jones Industrial Average (DJIA). To accomplish this, reddit news headlines were data mined to determine whether world news headlines could be correlated with the rise and fall of the Dow Jones. 
+                                        I was involved in a natural language processing project to predict the Dow Jones Industrial Average (DJIA). To accomplish this, Reddit news headlines were data mined to determine whether world news headlines could be correlated with the rise and fall of the Dow Jones. 
                                     </p>
                                     <p>
-                                        Our data set consisted of 8 years of reddit data, each day having 25 headlines and whether the DJIA fell or rose on that day. Other features such as the sentiment of the headlines and other preprocessing steps were added using the python library Sci-Kit-Learn.
+                                        Our data set consisted of 8 years of Reddit data, each day having 25 headlines and whether the DJIA fell or rose on that day. Other features such as the sentiment of the headlines and other preprocessing steps were added using the python library Sci-Kit-Learn.
                                     </p>
                                     <p>
                                         Our best result was a 58.8% accuracy using logistic regression, bi-grams, trigrams, and a day offset. For more details on the project, read the full <a href="https://github.com/TChan92/StockMarketNewsClassifier/blob/master/Report/acl2017.pdf" target="_blank">report</a> or visit the <a href="https://github.com/TChan92/StockMarketNewsClassifier" target="_blank">repository</a> on github.
@@ -284,11 +284,11 @@
                                     <h2>(2017)</h2>
                                     <p><a href="https://www.battlesnake.io/" target="_blank">BattleSnake</a> is an annual AI coding competition in Victoria BC. It is based of the classic game of 'Snake' with a few extra rules. There are multiple snakes, and a possibility to starve if a snake does not eat within 100 turns.</p>
                                     <p>My first year of BattleSnake (2016), was a huge learning experience for my team. Only one team member had ever competed in BattleSnake before. In the end our snake was pretty simple, and only contained code for it not to eat itself. Despite this, it was almost able to move to the 2nd round of the advanced division. The repository for the first snake (2016) can be found <a href="https://github.com/bates-andy123/battlesnake-python" target="_blank">here.</a>
-                                    <p>For my second year of BattleSnake I ended up coding a fairly sophisticated snake. First the snake tries to determine a good piece of food to eat. A good piece of food is determined if our snake is closest to it than all other competing snakes.</p>
+                                    <p>For my second year of BattleSnake I ended up coding a more sophisticated snake. First the snake tries to determine a good piece of food to eat. A good piece of food is determined if our snake is closest to it than all other competing snakes.</p>
                                     <p>
                                         If such a piece of food exists, it finds the shortest path using A* search. If a path exists, we check to make sure that if we were to move our snake to that piece of food that we can still reach our tail. This acts a heuristic to prevent our snake from running into dead ends.
                                     </p>
-                                    <p>If no path exists to a good food, our snake then tries to loop and follow its tail. This allows the snake to stall indefinitly (well, until it starves to death).</p>
+                                    <p>If no path exists to a good food, our snake then tries to loop and follow its tail. This allows the snake to stall indefintely (well, until it starves to death).</p>
                                     <p>Lastly, if no good food exists, nor a path to loop, our snake tries to find the most open space available using a flood fill algorithm Below is a video of our snake in action, playing a game with itself.</p>
                                     <iframe width="640" height="360" src="https://www.youtube.com/embed/D8bhfrScjn8?ecver=1" frameborder="0" allowfullscreen class="text-center"></iframe>
                                     <p>Our snake was unable to make it to the second round of the advanced division. Yet, it still gave a strong showing and was cited as a "pretty tough" by one of our opponents <a href="https://rdbrck.com/2017/03/building-bounty-snake-post-mortem/" target="_blank">(a developer at RedBrick practiced against it)</a>.</p>
@@ -320,7 +320,7 @@
                                     <p>Bounded buffer is an interesting mutual exclusion problem. Essentially there exists a circular buffer which can hold N items. Clients can then either remove or add items to the buffer asynchronously. While conceptually simple, there exist interesting edge cases.</p>
                                     <p>The buffer has a limited size, so adding items to a full buffer should cause clients to queue up, waiting for an open space to place their item. The opposite is also true for removing items from an empty buffer. Clients wanting to remove from an empty buffer will queue up waiting for items to be added. </p>
                                     <p>For further complication, clients cannot remove the same item, nor add to the same buffer space.</p>
-                                    <p>To solve this problem, two thread conditionals are used with a mutex. The two conditionals determine whether the buffer is full, or empty. When the buffer is no longer empty it signals waiting clients that they are able to remove and vice versa for adding. The mutex acts as a guard for interacting with the buffer itself. For example, if two clients try to remove at the same time, they could accidently both try to to remove the same item. This mutex gates the clients to removing items one at a time.</p>
+                                    <p>To solve this problem, two thread conditionals are used with a mutex. The two conditionals determine whether the buffer is full, or empty. When the buffer is no longer empty, it signals waiting clients that they are able to remove and vice versa for adding. The mutex acts as a guard for interacting with the buffer itself. For example, if two clients try to remove at the same time, they could accidently both try to remove the same item. This mutex gates the clients to removing items one at a time.</p>
                                     <p>For extra work, a round robin scheduler was added so that threads would be given an equal opportunity to complete their task.</p>
                                     <p>The repository for the bounded buffer problem can be found <a href="https://github.com/adamdubicki/BBuffer" target="_blank">here.</a></p>
                                     <button class="btn btn-success" type="button" data-dismiss="modal">
@@ -374,7 +374,7 @@
                                 <div class="modal-body">
                                     <h2>Detection Robot</h2>
                                     <h2>(2014)</h2>
-                                    <p>In my first year of UVic I worked on a group project for designing and building a robot. The goal was to find a UV emitting pylon in an arena. Our solution was to use binary search to try and find the direction of the pylon. The robot can be seen in action below (volume warning: the wheels screech a bit).</p>
+                                    <p>In my first year of UVic, I worked on a group project for designing and building a robot. The goal was to find a UV emitting pylon in an arena. Our solution was to use binary search to try and find the direction of the pylon. The robot can be seen in action below (volume warning: the wheels screech a bit).</p>
                                     <iframe width="640" height="360" src="https://www.youtube.com/embed/GkLYsO0KIoE?ecver=1" frameborder="0" allowfullscreen></iframe>
                                     <button class="btn btn-success" type="button" data-dismiss="modal">
                                     <i class="fa fa-times"></i>
